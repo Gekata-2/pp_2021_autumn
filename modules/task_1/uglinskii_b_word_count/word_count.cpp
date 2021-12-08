@@ -82,13 +82,13 @@ int ParallelWordCount(std::string input_str) {
 int CountWordsSubstr(std::string substr) {
   int count = 0;
   int i = 0;
-
-  while ((substr[i] == '-' || substr[i] == ' ') && i < substr.size()) {
+  int size = substr.size();
+  while ((substr[i] == '-' || substr[i] == ' ') && i < size) {
     i++;
   }
   int word = 0;
 
-  while (i < substr.size()) {
+  while (i < size) {
     if ((substr[i] != ' ' && substr[i] != '-') && word == 0) {
       word = 1;
       count++;
