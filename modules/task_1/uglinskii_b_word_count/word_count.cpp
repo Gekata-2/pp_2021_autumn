@@ -49,7 +49,6 @@ int ParallelWordCount(std::string input_str) {
 
       chunck_size = str_size / ProcNum;
       index = chunck_size * ProcRank;
-	  
       substr_word_count = CountWordsSubstr(input_str.substr(index, chunck_size));
     }
   }
